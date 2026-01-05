@@ -1,0 +1,12 @@
+server:
+  extraArgs:
+    - --insecure
+  service:
+    type: ClusterIP
+
+rbac:
+  policy.default: role:admin
+
+configs:
+  params:
+    server.connection.timeout: "60s"
