@@ -1,0 +1,18 @@
+server:
+  service:
+    type: ClusterIP
+
+  extraArgs:
+    - --insecure
+
+configs:
+  rbac:
+    create: true
+
+controller:
+  metrics:
+    enabled: false
+
+repoServer:
+  metrics:
+    enabled: false
