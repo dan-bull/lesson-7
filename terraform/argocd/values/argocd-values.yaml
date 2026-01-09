@@ -1,18 +1,14 @@
 server:
   service:
     type: ClusterIP
-
   extraArgs:
     - --insecure
+
+controller:
+  operationProcessors: 10
+  statusProcessors: 20
+  reconciliationTimeout: 180s
 
 configs:
   rbac:
     create: true
-
-controller:
-  metrics:
-    enabled: false
-
-repoServer:
-  metrics:
-    enabled: false
